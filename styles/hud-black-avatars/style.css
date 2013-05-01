@@ -1,0 +1,125 @@
+* { margin: 0; padding: 0; }
+a { text-decoration: none; color: blue; }
+a:hover { text-decoration: underline; }
+body { font: 0.75em/1.5 'Lucida Grande', sans-serif; color: #eee; background-color:#323232 }
+
+/* Alert message */
+#alert {
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 10;
+	width:100%;
+	height: 2em;
+	vertical-align: top;
+	background-color: #000;
+	opacity: .7;
+}
+
+#alert p {
+	opacity: 1.0;
+	color: #fff;
+	text-align:center;
+	height: 1em;
+	margin-top: 3px;
+}
+
+.tab-pane {
+	float: left;
+	maximium-width: 99%;
+}
+
+/*Tweet styles*/
+.tweet_list nth-child(even), .tweet_list nth-child(odd) {
+	padding: 0.2em 0.4em 0.2em 54px; /* The 54px left margin is to allow room for the profile image */
+	margin:0;
+	min-height: 52px; /* To make sure short messages don't cut off profile image */
+	word-wrap: break-word; 
+}
+.tweet_list nth-child(odd) {
+	background-color: #1f1f1f;
+}
+.tweet_text a {
+	color: #ff3;
+	width: 100px;
+	word-wrap: break-word; 
+}
+img.profile_image {
+    width: 48px;
+    height: 48px;
+	float:left;
+	margin: 3px auto 2px -50px; /* Negative margin places the profile image in the space created by the padding in .tweet_list li */
+}
+img.profile_image_big {
+    width: 96px;
+    height: 96px;
+	float:left;
+}
+a.user {
+	color: #e1c927;
+	text-decoration:none;
+}
+span.time {
+	color: #aaa;
+}
+#message_entry {
+	background-image: url(bg_messagearea.png);
+	background-repeat: repeat-x;
+	background-color: #000;
+	margin:0;
+	padding:0;
+	position: fixed;
+	bottom: 0; left: 0;
+	z-index: 10;
+	width:100%;
+}
+form {
+	margin: 0.4em 0.5em;
+}	
+input#status {
+	width: 99%;
+	margin-right:auto;
+	margin-left:auto;
+}
+input#send {
+	position:absolute;
+	left: -999px;
+	top: -999px;
+}
+input#status:focus, input#status:active, a:focus, a:active
+{
+	color:#000;
+    background-color:#ffa;
+}
+
+label {
+	display:block;
+}
+
+#menu {
+	display: block;
+	position: fixed;
+	float: right;
+	padding-bottom: 4px;
+	width: 170px;
+	z-index: 2;
+}
+#menu li {
+	list-style: none;
+}
+#menu li:hover {
+	color: #ffffff;
+	background: rgb(190,180,220);
+}
+#menu .header {
+	border: 1px solid;
+}
+
+#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+ul#icons {margin: 0; padding: 0;}
+ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+ul#icons span.ui-icon {float: left; margin: 0 4px;}
+#dialog label, #dialog input { display:block; }
+#dialog label { margin-top: 0.5em; }
+#div-buscar input{ width: 95%; }
+textarea { width: 97%; margin:0 }
