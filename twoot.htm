@@ -1,138 +1,69 @@
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
 
-	<head>
-		<title>ReTweet</title>
-		<meta http-equiv="Content-Type">
-                <link href="styles/hud-black-avatars/style.css" rel="stylesheet" type="text/css" >
-		<link type="text/css" href="css/dark-hive/jquery-ui-1.8.2.custom.css" rel="stylesheet">
-		<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
-                <script type="text/javascript" src="js/jquery.hotkeys-0.7.8-packed.js"></script>
- 		<script type="text/javascript" src="js/twoot.js"></script>
+<head>
+	<title>Sensores</title>
+	<meta charset="UTF-8">
+	
+	<link href="styles/hud-black-avatars/style.css" rel="stylesheet" type="text/css" >
+	<link type="text/css" href="css/dark-hive/jquery-ui-1.8.2.custom.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hotkeys-0.7.8-packed.js"></script>
+	<script type="text/javascript" src="js/twoot.js"></script>
 </head>
+
 <body> 
        
-      <div id="div-login" title="Login" class=".ui-dialog-content" style="display: none">
-      	<p><b>Bem vindo ao Twoot!</b></p>
-        <p>Ao usar o programa pela primeira vez, é necessário fazer login com a sua conta no Twitter</p>
-      </div>
-      
-      <div id="div-profile" title="Perfil" class=".ui-dialog-content" style="display: none">
-      	<p><img class="profile_image_big"> <b><span id="NAME"></span></b><br>@<span id="SCREEN_NAME"></span><br>
-              F-<span id="FOLLOWING"></span> - F+ <span id="FOLLOWERS"></span> - TW <span id="UPDATES"></span></p>
-        <p><span id="BIO"></span></p>
-        <br>
-        <p><span style:="display: block; float:left" id="LASTTWEET"></span></p>
-      </div>
-      
-      <div id="div-confirm-delete" title="Confirma exclusão?" class=".ui-dialog-content" style="display: none">
-        <p>Você tem certeza?</p>
-      </div>
-      
-      <div id="div-confirm-unfollow" title="Confirma deixar de seguir?" class=".ui-dialog-content" style="display: none">
-        <p>Você tem certeza?</p>
-      </div>
-      
-      <div id="div-confirm-block" title="Confirma bloquear?" class=".ui-dialog-content" style="display: none">
-        <p>O quê você gostaria de fazer?</p>
-      </div>
-      
-      <div id="div-confirm-block-silenty" title="Bloquear silenciosamente" class=".ui-dialog-content" style="display: none">
-        <p>Você tem certeza?</p><br>
-        <p<span style="font-size: x-small;"><b>NOTA:</b> Ao usar essa função você deixa de ver as atualizações do contato selecionado,
-        sem que ele saiba disso. No entanto, ele ainda pode ter acesso ao seu perfil. </span></p>
-      </div>
-      
-      <div id="div-buscar" title="Buscar" class=".ui-dialog-content" style="display: none">
-        <p>Digite o nome do contato ou hashtag:</p><br>
-        <p><input id="search-text" class="ui-widget-content ui-corner-all" ></p>
-      </div>
-
-	  <div id="menu" class="ui-dialog-content ui-corner-all ui-widget ui-helper-clearfix" style="display: none">
-		<ul>
-			<li class="header" id='accounts'>Selecione a Conta</li>
-			<li class="header">Timelines padrão</li>
-			<li><a onclick="javascript:addTab('Friends')">Amigos</a></li>
-			<li><a onclick="javascript:addTab('Mentions')">Menções</a></li>
-			<li><a onclick="javascript:addTab('Timeline')">Timeline</a></li>
-			<li class="header">Mensagens Diretas</li>
-			<li>Entrada</li>
-			<li>Enviadas</li>
-			<li>Enviar nova</li>
-			<li class="header">Extras</li>
-			<li><a onclick="javascript:showProfile(accounts[currAc].username)">Meu perfil</a></li>
-			<li>Followback</li>
-			<li><a onclick="javascript:addTab('Trends')">Trends</a></li>
-			<li class="header">Preferências</li>
-			<li>Contas</li>
-			<li>Serviços Web</li>
-			<li>Cores e Fontes</li>
-			<li>Temas</li>
-			<li>Licença</li>
-			<li>Sobre o ReTweet</li>
-		</ul>
-	  </div>
-
-     
-     <!--
-     
-      <div id="tab-pane-1">
-            	<ul>
-            		<li><a href="#tabs-1">Amigos</a></li>
-            		<li><a href="#tabs-2">Menções</a></li>
-            		<li><a href="#tabs-3">Timeline</a></li>
-            	</ul>
-            	<div id="tabs-1">
-            		<div class="tweets">
-                  		<div id="alert"><p></p></div>
-                  		<ul class="tweet_list" id="twl-b-1"></ul>
-                  	</div>
-                </div>
-            	<div id="tabs-2">
-            		<div class="tweets">
-                  		<ul class="tweet_list" id="twl-b-2"></ul>
-                  	</div>
-            	</div>
-            	<div id="tabs-3">
-					<ul class="tweet_list" id="twl-b-3"></ul>	
-            	</div>
-      </div>
+	<div id="div-welcome" title="Bem vindo" class=".ui-dialog-content" style="display: none">
+		<p><b>Bem vindo!</b></p>
+		<p>Ao usar este software pela primeira vez, Ã© necessÃ¡rio configurar seus sensores.</p>
+	</div>
 	
-	-->
-	
+	<div id="div-setup" title="ConfiguraÃ§Ãµes" class=".ui-dialog-content" style="display: none">
+		<p>UsuÃ¡rio</p>
+		<p><input /></p>
+		<br/>
+		<p>Senha</p>
+		<p><input type="password"></p>
+	</div>
+      
 	<!-- Hidden div, only to serve as placeholder for a new pane -->
-	
-	<div id="new-pane-placeholder"></div>
+	<div id="new-pane-placeholder" style="display: none">
+		Banana<br>
+		Banana<br>
+		Banana<br>
+		Banana<br>
+		Teracota Pie<br>
+		Teracota Pie<br>
+		Banana<br>
+		Banana<br>
+		Banana<br>
+		Banana<br>
+		Teracota Pie<br>
+		Teracota Pie<br>
+	</div>
 
 	<div id="message_entry">
 
-             <ul  id="icons" class="ui-widget ui-helper-clearfix">
+		<ul  id="icons" class="ui-widget ui-helper-clearfix">
 
-        <li class="ui-state-default ui-corner-all" title="Enviar status" onclick="javascript:setStatus()"><span>Enviar</span></li>
-		<li class="ui-state-default ui-corner-all" title="Responder" onclick="javascript:reply()"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Retweet" onclick="javascript:retweet()"><span class="ui-icon ui-icon-refresh"></span></li>
-	    <li class="ui-state-default ui-corner-all" title="Marcar como favorito" onclick="javascript:favorite()"><span class="ui-icon ui-icon-heart"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Excluir" onclick="javascript:confirmDeleteTweet()"><span class="ui-icon ui-icon-trash"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Seguir" onclick="javascript:follow()"><span class="ui-icon ui-icon-plusthick"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Cancelar Seguir" onclick="javascript:confirmUnfollow()"><span class="ui-icon ui-icon-minusthick"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Bloquear" onclick="javascript:confirmBlock()"><span class="ui-icon ui-icon-cancel"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Ver perfil" onclick="javascript:showProfile()"><span class="ui-icon ui-icon-script"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Encurtar URL"  onclick="javascript:shrinkUrl()"><span class="ui-icon ui-icon-link"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Buscar"  onclick="javascript:search()"><span class="ui-icon ui-icon-search"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Enviar imagem"><span class="ui-icon ui-icon-image"></span></li>
-		<li class="ui-state-default ui-corner-all" title="Novo painel"  onclick="javascript:createNewPane()"><span class="ui-icon ui-icon-grip-dotted-vertical"></span></li>
-		<!-- próxima versão <li class="ui-state-default ui-corner-all" title="Fechar painel" onclick="javascript:closePane()"><span class="ui-icon ui-icon-close"></span></li> -->
-		<!-- próxima versão <li class="ui-state-default ui-corner-all" onclick="javascript:showMenu()"><span class="ui-icon ui-icon-triangle-1-n"></span>Menu </li> -->
-                 <div id="status_count">140</div>
+			<li class="ui-state-default ui-corner-all" title="Enviar status"><span>Conectar</span></li>
+			<li class="ui-state-default ui-corner-all" title="Atualizar grÃ¡fico"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
+			<li class="ui-state-default ui-corner-all" title="Atualizar tudo"><span class="ui-icon ui-icon-refresh"></span></li>
+			<li class="ui-state-default ui-corner-all" title="Adicionar sensor" onclick="javascript:Panes.createNewPane()">
+				<span class="ui-icon ui-icon-plusthick"></span>
+			</li>
+			<li class="ui-state-default ui-corner-all" title="Remover sensor" onclick="javascript:confirmUnfollow()">
+				<span class="ui-icon ui-icon-minusthick"></span>
+			</li>
+		</ul>
 
-            </ul>
-
-                <form id="status_entry" method="post">
+		<form id="status_entry" method="post">
 			<textarea name="status" rows="3" onBlur="updateStatusCount()" onChange="updateStatusCount()" onKeyUp="updateStatusCount()" id="status" class="ui-widget-content ui-corner-all"  ></textarea>
 			<input type="submit" id="send" value="Send" >
 		</form>
-		<div id="accounts"></div>
 	</div>
 	
 	<script language="javascript">
@@ -141,12 +72,6 @@
 		            function() { $(this).addClass('ui-state-hover'); },
 		            function() { $(this).removeClass('ui-state-hover');}
 		);
-		$('.tab-pane').click( function() {
-			alert(3);
-			console.log($(this));
-		});
-	
-		login();
-    </script>
+	</script>
 </body>
 </html>
