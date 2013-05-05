@@ -31,30 +31,39 @@
 	</div>
       
 	<!-- Hidden div, only to serve as placeholder for a new pane -->
-	<div id="new-pane-placeholder" style="display: none">
-		Banana<br>
-		Banana<br>
-		Banana<br>
-		Banana<br>
-		Teracota Pie<br>
-		Teracota Pie<br>
-		Banana<br>
-		Banana<br>
-		Banana<br>
-		Banana<br>
-		Teracota Pie<br>
-		Teracota Pie<br>
-		<br><br><br><br><br><br>
-		<br><br><br><br><br><br>
-		Pie
-		<br><br><br><br>
-	</div>
+	<div id='panes'>
+        <div id="new-pane-placeholder" style="display: none">
+            <div class="display-holder">
+                <h2>Sensor 1</h3>
+                <p>
+                    <span class='label bigger'>Temperatura atual</span>
+                    <span class='display bigger'>18&deg;</span>
+                </p>
+                <p>
+                    <span class='label bigger'>Média 5 minutos</span>
+                    <span class='display bigger'>16&deg;</span>
+                </p>
+                <p>
+                    <span class='label bigger'>Média 30 minutos</span>
+                    <span class='display bigger'>16&deg;</span>
+                </p>
+                <p>
+                    <span class='label bigger'>Umidade</span>
+                    <span class='display bigger'>22%</span>
+                </p>
+                <p>
+                    <span class='label bigger'>Sincronização</span>
+                    <span class='display bigger erro'>FALHA</span>
+                </p>
+            </div>
+        </div>
+    </div>
 
 	<div id="message_entry">
 
 		<ul  id="icons" class="ui-widget ui-helper-clearfix">
 
-			<li class="ui-state-default ui-corner-all" title="Enviar status"><span>Conectar</span></li>
+			<li class="ui-state-default ui-corner-all" title="Enviar status"><span>&nbsp;Conectar&nbsp;</span></li>
 			<li class="ui-state-default ui-corner-all" title="Atualizar gráfico"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
 			<li class="ui-state-default ui-corner-all" title="Atualizar tudo"><span class="ui-icon ui-icon-refresh"></span></li>
 			<li class="ui-state-default ui-corner-all" title="Adicionar sensor" onclick="javascript:Panes.createNewPane()">
@@ -68,10 +77,6 @@
 			</li>
 		</ul>
 
-		<form id="status_entry" method="post">
-			<textarea name="status" rows="3" onBlur="updateStatusCount()" onChange="updateStatusCount()" onKeyUp="updateStatusCount()" id="status" class="ui-widget-content ui-corner-all"  ></textarea>
-			<input type="submit" id="send" value="Send" >
-		</form>
 	</div>
 	
 	<script language="javascript">

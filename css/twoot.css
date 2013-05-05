@@ -1,1 +1,94 @@
+* {
+    font-family: Ubuntu;
+}
 
+@font-face {
+  font-family: 'Digital';
+  src: url('/fonts/ds-digital-regular.ttf') format('truetype');
+}
+
+@media (min-width: 366px) {
+    .tab-pane {
+        min-height: 400px;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 365px) {
+    .tab-pane {
+        height: auto;
+        width: 100% !important;
+    }
+    #panes > div:last-of-type {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+
+.display-holder {
+    position: relative;
+    display: table;
+    width: 97%;
+    margin: 5px;
+}
+
+h2 {
+    font-size: 16px;
+    height: 28px;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin-top: 15px;
+    font-size: 14px;
+    height: 26px;
+}
+h3:after {
+    content: ' ';
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    position: relative;
+    left: 0;
+    top: 2px;
+    border-bottom: 1px dotted #fff;
+}
+
+
+.display-holder > * {
+    display: table-row;
+    height: 50px;
+}
+
+.label {
+    display: table-cell;
+    width: 70%;
+    height: 30px;
+    vertical-align: bottom;
+}
+
+.label.bigger {
+    font-size: 14px;
+}
+
+
+.display {
+    display: table-cell;
+    font-family: 'Digital';
+    right: 10px;
+    height: 30px;
+    width: 30%;
+    text-align: right;
+    vertical-align: bottom;
+    line-height: 32px;
+}
+
+.display.bigger {
+    font-size: 38px;
+}
+
+.erro {
+    color: #a8000e;
+}
