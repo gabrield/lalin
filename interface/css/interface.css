@@ -1,11 +1,16 @@
+/* Fonts */
+
 * {
     font-family: Ubuntu;
 }
+
 
 @font-face {
   font-family: 'Digital';
   src: url('/fonts/ds-digital-regular.ttf') format('truetype');
 }
+
+/* Responsive layout */
 
 @media (min-width: 366px) {
     .tab-pane {
@@ -26,6 +31,7 @@
 
 
 
+/* Panes */
 
 .display-holder {
     position: relative;
@@ -89,6 +95,17 @@ h3:after {
     font-size: 38px;
 }
 
-.erro {
+/* chart */
+
+.chart-pane {
+    display: block;
+    width: 98%;
+    height: 150px;
+    min-height: 0;
+}
+
+/* Common */
+
+.error {
     color: #a8000e;
 }

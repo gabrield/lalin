@@ -6,13 +6,14 @@
 	<meta charset="UTF-8">
 	
 	<link href="styles/hud-black-avatars/style.css" rel="stylesheet" type="text/css" >
-	<link type="text/css" href="css/twoot.css" rel="stylesheet">
+	<link type="text/css" href="css/interface.css" rel="stylesheet">
 	<link type="text/css" href="css/dark-hive/jquery-ui-1.8.2.custom.css" rel="stylesheet">
 	
 	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
 	<script type="text/javascript" src="js/jquery.hotkeys-0.7.8-packed.js"></script>
-	<script type="text/javascript" src="js/twoot.js"></script>
+    <script type="text/javascript" src="js/jquery.flot.js"></script>
+	<script type="text/javascript" src="js/interface.js"></script>
 </head>
 
 <body> 
@@ -53,7 +54,7 @@
                 </p>
                 <p>
                     <span class='label bigger'>Sincronização</span>
-                    <span class='display bigger erro'>FALHA</span>
+                    <span class='display bigger error'>FALHA</span>
                 </p>
             </div>
         </div>
@@ -64,7 +65,7 @@
 		<ul  id="icons" class="ui-widget ui-helper-clearfix">
 
 			<li class="ui-state-default ui-corner-all" title="Enviar status"><span>&nbsp;Conectar&nbsp;</span></li>
-			<li class="ui-state-default ui-corner-all" title="Atualizar gráfico"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
+			<li class="ui-state-default ui-corner-all" title="Atualizar gráfico" onclick="javascript:Panes.createChartPane()"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
 			<li class="ui-state-default ui-corner-all" title="Atualizar tudo"><span class="ui-icon ui-icon-refresh"></span></li>
 			<li class="ui-state-default ui-corner-all" title="Adicionar sensor" onclick="javascript:Panes.createNewPane()">
 				<span class="ui-icon ui-icon-plusthick"></span>
