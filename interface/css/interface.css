@@ -91,6 +91,10 @@ h3:after {
     line-height: 32px;
 }
 
+.display .num {
+    font-family: 'Digital';
+}
+
 .display.bigger {
     font-size: 38px;
 }
@@ -105,6 +109,10 @@ h3:after {
 }
 
 /* Common */
+
+.success {
+    color: #00a80e;
+}
 
 .error {
     color: #a8000e;

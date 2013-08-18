@@ -12,53 +12,62 @@
 	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
 	<script type="text/javascript" src="js/jquery.hotkeys-0.7.8-packed.js"></script>
-    <script type="text/javascript" src="js/jquery.flot.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.js"></script>
+	<script type="text/javascript" src="js/sync.js"></script>
 	<script type="text/javascript" src="js/interface.js"></script>
 </head>
 
 <body> 
-       
+	   
 	<div id="div-welcome" title="Bem vindo" class=".ui-dialog-content" style="display: none">
 		<p><b>Bem vindo!</b></p>
 		<p>Ao usar este software pela primeira vez, é necessário configurar seus sensores.</p>
 	</div>
 	
-	<div id="div-setup" title="Configurações" class=".ui-dialog-content" style="display: none">
-		<p>Usuário</p>
+	<div id="div-setup" title="Configurações do Sensor" class=".ui-dialog-content" style="display: none">
+		<p>URL do servidor:</p>
 		<p><input /></p>
 		<br/>
-		<p>Senha</p>
-		<p><input type="password"></p>
+		<p>Intervalo de atualização (segundos):</p>
+		<p><input value="5"></p>
 	</div>
-      
+	  
 	<!-- Hidden div, only to serve as placeholder for a new pane -->
 	<div id='panes'>
-        <div id="new-pane-placeholder" style="display: none">
-            <div class="display-holder">
-                <h2>Sensor 1</h3>
-                <p>
-                    <span class='label bigger'>Temperatura atual</span>
-                    <span class='display bigger'>18&deg;</span>
-                </p>
-                <p>
-                    <span class='label bigger'>Média 5 minutos</span>
-                    <span class='display bigger'>16&deg;</span>
-                </p>
-                <p>
-                    <span class='label bigger'>Média 30 minutos</span>
-                    <span class='display bigger'>16&deg;</span>
-                </p>
-                <p>
-                    <span class='label bigger'>Umidade</span>
-                    <span class='display bigger'>22%</span>
-                </p>
-                <p>
-                    <span class='label bigger'>Sincronização</span>
-                    <span class='display bigger error'>FALHA</span>
-                </p>
-            </div>
-        </div>
-    </div>
+		<div id="new-pane-placeholder" style="display: none">
+			<div class="display-holder">
+				<h2>Sensor 1</h3>
+				<p>
+					<span class='label bigger'>Temperatura atual</span>
+					<span class='display bigger'>
+						<span data-label='current' class='num'>--</span>&deg;
+					</span>
+				</p>
+				<p>
+					<span class='label bigger'>Média 5 minutos</span>
+					<span class='display bigger'>
+						<span class='num'>--</span>&deg;
+					</span>
+				</p>
+				<p>
+					<span class='label bigger'>Média 30 minutos</span>
+					<span class='display bigger'>
+						<span class='num'>--</span>&deg;
+					</span>
+				</p>
+				<p>
+					<span class='label bigger'>Umidade</span>
+					<span class='display bigger'>
+						<span class='num'>--</span>%
+					</span>
+				</p>
+				<p>
+					<span class='label bigger'>Sincronização</span>
+					<span data-label='status' class='display bigger success'>--</span>
+				</p>
+			</div>
+		</div>
+	</div>
 
 	<div id="message_entry">
 
@@ -81,10 +90,10 @@
 	</div>
 	
 	<script language="javascript">
-	    //hover states on the static widgets
+		//hover states on the static widgets
 		$('ul#icons li').hover(
-		            function() { $(this).addClass('ui-state-hover'); },
-		            function() { $(this).removeClass('ui-state-hover');}
+					function() { $(this).addClass('ui-state-hover'); },
+					function() { $(this).removeClass('ui-state-hover');}
 		);
 	</script>
 </body>
